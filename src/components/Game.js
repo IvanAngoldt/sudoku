@@ -7,6 +7,7 @@ import StatusSection from "./StatusSection";
 import Numbers from "./Numbers";
 import Timer from "./Timer";
 import Difficulty  from "./Difficulty";
+import Overlay from "./Overlay";
 
 const Game = () => {
 
@@ -387,22 +388,20 @@ const Game = () => {
         }
     };
 
-    return(
+    return (
         <div className="game-container">
-            {overlay && won && (
-                <div className="overlay">
-                    <div className="overlay-content">
-                        Поздравляю, вы победили!
-                    </div>
-                </div>
-            )}
+            <Overlay
+                won={won}
+            />
             <Timer
                 onStatusChange={handleTimerStatusChange}
                 onReset={resetTimer}
-                isGameActive={isGameActive} />
+                isGameActive={isGameActive}
+            />
             <Difficulty
                 onDifficultyChange={handleDifficultyChange}
-                isActive={isGameActive} />
+                isActive={isGameActive}
+            />
             <GameSection
                 gameArray={gameArray}
                 initArray={initArray}
@@ -426,8 +425,8 @@ const Game = () => {
                 completedNumbers={completedNumbers}
                 isActive={isGameActive}
             />
-        </div>
-    )
+            </div>
+        );
 }
 
 export default Game

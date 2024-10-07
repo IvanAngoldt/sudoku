@@ -39,7 +39,7 @@ const Timer = ({ onStatusChange, onReset }) => {
     };
 
     return (
-        <div className={` ${isActive ? '' : 'disabled'}`}>
+        <div className={`timer`}>
             <div>{formatTime(time)}</div>
             <button onClick={toggleTimer}>
                 {isActive ? 'Pause' : 'Resume'}
