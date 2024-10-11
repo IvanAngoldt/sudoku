@@ -48,9 +48,9 @@ function _generateUniqueSudoku(solvedArray, difficulty) {
     let cellsAvailable = [];
 
     if (currentDifficulty === 'Easy') {
-        minimumCells = 8; // 3
-        maximumCells = 9; // 7
-        totalCells = 80; // 45
+        minimumCells = 3; // 3
+        maximumCells = 7; // 7
+        totalCells = 45; // 45
     } else if (currentDifficulty === 'Medium') {
         minimumCells = 2;
         maximumCells = 6;

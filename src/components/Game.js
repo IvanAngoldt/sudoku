@@ -11,6 +11,24 @@ import Overlay from "./Overlay";
 
 const Game = () => {
 
+    /*
+    gameArray:
+    initArray:
+    solvedArray:
+    cellSelected:
+    incorrectCells:
+    completedNumbers:
+    highlightCubes:
+    highlightNumber:
+    noteMode:
+    notesArray:
+    history:
+    isGameActive:
+    difficulty:
+    resetTimer:
+    won:
+    */
+
     const [gameArray, setGameArray] = React.useState([])
     const [initArray, setInitArray] = React.useState([])
     const [solvedArray, setSolvedArray] = React.useState([])
@@ -26,7 +44,6 @@ const Game = () => {
     const [difficulty, setDifficulty] = React.useState('Easy');
     const [resetTimer, setResetTimer] = React.useState(false);
     const [won, setWon] = React.useState(false);
-    const [overlay, setOverlay] = React.useState(false);
 
     React.useEffect(() => {
         let [temporaryInitArray, temporarySolvedArray] = getUniqueSudoku(difficulty);
@@ -43,7 +60,6 @@ const Game = () => {
         setHistory([])
         setResetTimer(true);
         setWon(false);
-        setOverlay(false)
 
         let initialNotesArray = new Array(81).fill(null).map(() => [])
         setNotesArray(initialNotesArray)
@@ -163,7 +179,6 @@ const Game = () => {
             checkCompletedNumbers(tempArray);
 
             if (isSolved(index, value)) {
-                setOverlay(true);
                 setWon(true);
             }
         }
