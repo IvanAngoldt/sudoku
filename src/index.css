@@ -617,7 +617,7 @@ input:checked + .status__action-fast-mode-slider:before {
     font-size: 22px;
   }
   .status__numbers {
-    top: -10px;
+    top: 10px;
     left: 0;
     width: 100%;
     grid-template-columns: repeat(9, 1fr);

@@ -11,24 +11,6 @@ import Overlay from "./Overlay";
 
 const Game = () => {
 
-    /*
-    gameArray:
-    initArray:
-    solvedArray:
-    cellSelected:
-    incorrectCells:
-    completedNumbers:
-    highlightCubes:
-    highlightNumber:
-    noteMode:
-    notesArray:
-    history:
-    isGameActive:
-    difficulty:
-    resetTimer:
-    won:
-    */
-
     const [gameArray, setGameArray] = React.useState([])
     const [initArray, setInitArray] = React.useState([])
     const [solvedArray, setSolvedArray] = React.useState([])
@@ -402,7 +384,7 @@ const Game = () => {
             setHistory(tempHistory);
         }
     };
-
+    
     return (
         <div className="game-container">
             <Overlay
